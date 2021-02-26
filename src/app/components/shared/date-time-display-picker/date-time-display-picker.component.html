@@ -1,0 +1,17 @@
+<mat-form-field class="glob-adv-full-width">
+    <input #pickerInput matInput [matDatepicker]="picker" class="glob-search-input" readonly style="position: relative;"
+        (dateChange)="onDateChanged('change', $event)"  
+        [min]="min" [max]="max"
+
+        [(ngModel)]="selectedDate">
+    <mat-datepicker-toggle class="input-date-button" matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+    <!-- <button mat-button
+        *ngIf="selectedDate"
+        style="position: absolute;top:2px;right: 20px;z-index: 982;"
+        matSuffix mat-icon-button aria-label="Clear" (click)="resetDate()"
+        class="input-x-button">
+        <mat-icon>close</mat-icon>
+    </button> -->
+    <i class="infield bgis-icon icon-cancel" style="position: absolute;right:25px;top: 6px;" (click)="resetDate()"></i>
+</mat-form-field>

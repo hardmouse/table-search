@@ -1,0 +1,10 @@
+@import "styles/theme.scss";
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "styles/system.scss";
+@import "styles/webicons.scss";
+@import "styles/fonts.scss";
+@import "styles/components.scss";
+@import "styles/toastr.scss";
+@import "styles/mat-overwrite.scss";
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,25 @@
+app-date-time-display-picker{
+    .mat-form-field-wrapper{
+        padding: 7px 0 0 0!important;
+        margin: 0!important;
+        .mat-form-field-infix{
+            padding: 0;
+            input{
+                height: 1.5rem;
+                background-color: white;
+                border: 0;
+                border-bottom: 1px solid #777;
+            }
+        }
+        .mat-form-field-suffix{
+            .mat-datepicker-toggle.input-date-button{
+                position: absolute;
+                top: -20px;
+                right: 0;
+            }
+        }
+    }
+    .mat-form-field-underline{
+        display: none;
+    }
+}

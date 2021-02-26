@@ -1,0 +1,21 @@
+.input-wrapper{
+    input{
+        width: 100%;
+        padding: 0.15rem 2.5rem 0.15rem 0.15rem;
+        border: 0;
+        border-bottom: 1px solid #777;
+        &.combo-disabled{
+            background-color: #FFF;
+        }
+    }
+    input:focus{
+        outline: 1px solid #0079C1;
+    }
+    button{
+        border: 0;
+        padding: 0.12rem 0.2rem;
+        background-color: transparent;
+        position: absolute;
+        right: 6px;
+    }
+}

@@ -1,0 +1,28 @@
+<div class="container-fluid main-height">
+    <div class="container-fluid">
+        <div class="bgis-card" role="region">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Project Panel</h2>
+                    <!-- <h2>{{ 'Header' | apptranslate: 'MAIN' | async }}</h2> -->
+                    <div class="content-line">
+                        <p>Approval Portal - text replaced</p>
+                        <!-- <p>{{ 'BodyContent' | apptranslate: 'MAIN' | async }}</p> -->
+                        <div class="ctrl-btns">
+                            <!-- <button type="button" class="btn btn-primary" (click)="search()">
+                                {{ 'ButtonSearch' | apptranslate: 'MAIN' | async }}
+                            </button>
+                            <button type="button" class="btn btn-light" (click)="cancel()">
+                                {{ 'ButtonCancel' | apptranslate: 'MAIN' | async }}
+                            </button> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <app-search-table [showDetail]="showDetail" [searching]="searching" [cancelling]=cancelling></app-search-table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer-action role="contentinfo" ></app-footer-action>
