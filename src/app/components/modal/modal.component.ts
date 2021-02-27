@@ -3,7 +3,7 @@ import { Component, ViewEncapsulation, ElementRef, Input, OnInit, OnDestroy } fr
 import { ModalService } from '../../services/modal.service';
 
 @Component({
-  selector: 'bgis-modal',
+  selector: 'test-modal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.scss']
 })

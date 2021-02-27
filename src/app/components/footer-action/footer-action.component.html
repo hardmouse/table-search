@@ -10,11 +10,11 @@
     </div>
 </div>
 
-<bgis-modal [id]="footerModal">
-    <div class="modal-close" (click)="closeModal(footerModal);"><i class="bgis-icon icon-close"></i></div>
+<test-modal [id]="footerModal">
+    <div class="modal-close" (click)="closeModal(footerModal);"><i class="test-icon icon-close"></i></div>
     <h2>DELEGATE APPROVAL</h2>
     <div class="modal-content-scroll-area">
-        <div class="title"><i class="bgis-icon icon-user-add"></i>Delegating the approval of the following equipment:</div>
+        <div class="title"><i class="test-icon icon-user-add"></i>Delegating the approval of the following equipment:</div>
         <div class="wrapper-box">
             <div *ngFor="let item of delegateObj; let i = index">
                 <div *ngIf="item.detail.length > 0">
@@ -29,7 +29,7 @@
         <app-combo-box [name]="'SearchApprover'" [title]="'Search Contact'" [valueInput]=""
             (inputClick)="approverSearchChange($event)" (conclick)="conclick()" class="approver-box">
         </app-combo-box>
-        <div *ngIf="approverTableShow" class="bgis-card">
+        <div *ngIf="approverTableShow" class="test-card">
             <div class="approver-table">
                 <div class="table-row table-header">
                     <div class="table-cell" *ngFor="let cata of approverHeaders">
@@ -62,4 +62,4 @@
             <button type="button" class="btn btn-primary" style="max-width:12rem;" (click)="closeModal(footerModal);">Close</button>
         </div>
     </div>
-</bgis-modal>
+</test-modal>

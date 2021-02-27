@@ -66,7 +66,7 @@
   
       <div class="table-row table-select-all" (mouseover)="closeAllTitleDropdown()">
         <div class="table-cell">
-          <i class="bgis-icon arrows" [ngClass]="openAll ? 'icon-down-open-big':'icon-right-open-big'" (click)="checkAllCollapse()"></i>
+          <i class="test-icon arrows" [ngClass]="openAll ? 'icon-down-open-big':'icon-right-open-big'" (click)="checkAllCollapse()"></i>
           <input class="form-check-input" type="checkbox" value=""
             [attr.aria-label]="'Check All Items'" [(ngModel)]="checkAll"
             (change)="onCheckAll()"
@@ -80,7 +80,7 @@
         <div *ngFor="let item of requestsListFiltered; let i = index" >
           <div class="table-row table-item-info" (mouseover)="closeAllTitleDropdown()">
             <div class="table-cell">
-              <i class="bgis-icon arrows" [ngClass]="requestsListFiltered[i].isOpen ? 'icon-down-open-big':'icon-right-open-big'" (click)="checkItemCollapse(i)"></i>
+              <i class="test-icon arrows" [ngClass]="requestsListFiltered[i].isOpen ? 'icon-down-open-big':'icon-right-open-big'" (click)="checkItemCollapse(i)"></i>
               <input class="form-check-input" type="checkbox" value=""
                 *ngIf="!item.noChildApprovable"
                 [attr.aria-label]="'Checkbox for ' +item.name"
@@ -89,7 +89,7 @@
               >
               <!-- {{item.BuildingItemNo}} -->
              <div innerHTML="{{ item.BuildingItemNo | highlighSearch : catagory[0].input}}"> </div>
-              <i class="bgis-icon icon-info-circled"></i>
+              <i class="test-icon icon-info-circled"></i>
             </div>
             <div class="table-cell">
               &nbsp;
@@ -104,7 +104,7 @@
               &nbsp;
             </div>
             <div class="table-cell" [ngClass]="{'danger-cell':i==3}">
-              {{item.RequestDate}} <i class="bgis-icon icon-warning-color" *ngIf="i==3"></i>
+              {{item.RequestDate}} <i class="test-icon icon-warning-color" *ngIf="i==3"></i>
             </div>
             <div class="table-cell">
               {{item.Location}}
