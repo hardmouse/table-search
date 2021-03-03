@@ -23,6 +23,7 @@ import { DateTimePickerValue} from '../../../module/common.model';
 
 export class DateTimeDisplayPickerComponent implements OnInit, OnDestroy {
 
+  @Input() name: string;
   @Input() control: AbstractControl;
   @Input() selectedDate: Date;
   @Input() dateFieldLabel: string;

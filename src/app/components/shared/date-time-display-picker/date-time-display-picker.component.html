@@ -2,7 +2,7 @@
     <input #pickerInput matInput [matDatepicker]="picker" class="glob-search-input" readonly style="position: relative;"
         (dateChange)="onDateChanged('change', $event)"  
         [min]="min" [max]="max"
-
+        [id]="name"
         [(ngModel)]="selectedDate">
     <mat-datepicker-toggle class="input-date-button" matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>

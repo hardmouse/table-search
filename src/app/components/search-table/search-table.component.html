@@ -3,8 +3,8 @@
   <div class="search-wrapper" role="search">
     <div class="table-search">
       <div class="table-row table-header table-title" (mouseover)="closeAllTitleDropdown()">
-        <div class="table-cell" *ngFor="let title of catagory">
-          {{title.name}}
+        <div class="table-cell" *ngFor="let title of catagory; let i = index">
+          <label [for]="'filter'+i">{{title.name}}</label>
           <!-- <sub>{{title.isOpen}} - {{subs.dropdownOpen}}</sub> -->
         </div>
       </div>
@@ -57,7 +57,10 @@
               <ng-container *ngIf="title.type=='date'" >
                 <div style="min-width: 5rem;margin-top: -1.2rem;">
                   <app-date-time-display-picker 
-                    [dateFieldLabel]="title.name" [(selectedDate)]="requestDate" (selectedDateValue)="setDateValue($event,title.type)">
+                    [name]="'filter'+i"
+                    [dateFieldLabel]="title.name" 
+                    [(selectedDate)]="requestDate" 
+                    (selectedDateValue)="setDateValue($event,title.type)">
                   </app-date-time-display-picker>
               </div>
               </ng-container>
@@ -147,7 +150,7 @@
               </div>
               <div class="table-cell">
                  <div *ngIf="iUpdated.Status=='REJECTED'" class="text-danger">{{iUpdated.RejectedBy}}</div>
-                <app-combo-box *ngIf="iUpdated.Status=='PENDING'" [name]="'reason'+i" [title]="" [valueInput]="iUpdated.reason" (blur)="hideReasonSearch()"
+                <app-combo-box *ngIf="iUpdated.Status=='PENDING'" [name]="'reason'+i+'_'+j" [title]="" [valueInput]="iUpdated.reason" (blur)="hideReasonSearch()"
                 [hideTitle]="true" [errorMessage]="'Please enter a valid value.'" [isSearch]="true" [maxLen]="255"
                 (inputClick)="reasonTextOnChang($event,i,j)" (conclick)="hideReasonSearch()"></app-combo-box>
                 <div *ngIf="iUpdated.showReasonSearchDialog" class="dropdown-box">
