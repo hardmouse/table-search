@@ -11,19 +11,19 @@
         [ngClass]="{'warning-bottom':!isValid, 'padding-left':isSearch, 'combo-disabled':isDisabled}" type="{{type}}"
         maxlength="{{maxLen}}" [disabled]="isDisabled" [id]="name" [attr.aria-label]="name">
         <span *ngIf="hasplaceholder" class="placeholder">Enter This First</span>
-        <button [attr.aria-label]="'search filter for the input field - ' + name" class="input-icon-button on-left" (click)="onClick()" *ngIf="isSearch || isFilter || isSelect || isTable || isComboCheck">
-            <i *ngIf="isSearch" class="infield test-icon icon-search-1"></i>
-            <i *ngIf="isFilter" class="infield test-icon icon-filter"></i>
-            <i *ngIf="isTable" class="infield test-icon icon-location-2"></i>
-            <i *ngIf="isSelect" class="infield test-icon icon-down-open-big" [ngStyle]="{'color': !isValid ? '#af1685': ''}"></i>
-            <i *ngIf="isComboCheck" class="infield test-icon icon-filter"></i>
-        </button>
         <button aria-label="cancel" class="input-icon-button on-left" style="right: 30px;" (click)="onClean()" *ngIf="isFilter || isTable">
             <i *ngIf="isFilter" class="infield test-icon icon-cancel"></i>
             <i *ngIf="isTable" class="infield test-icon icon-cancel" ></i>
         </button>
         <button aria-label="checkbox" class="input-icon-button on-left" style="right: 30px;" (click)="onSelect()" *ngIf="isComboCheck">
             <i *ngIf="isComboCheck" class="infield test-icon icon-down-open-big" [ngStyle]="{'color': !isValid ? '#af1685': ''}"></i>
+        </button>
+        <button [attr.aria-label]="'search filter for the input field - ' + name" class="input-icon-button on-left" (click)="onClick()" *ngIf="isSearch || isFilter || isSelect || isTable || isComboCheck">
+            <i *ngIf="isSearch" class="infield test-icon icon-search-1"></i>
+            <i *ngIf="isFilter" class="infield test-icon icon-filter"></i>
+            <i *ngIf="isTable" class="infield test-icon icon-location-2"></i>
+            <i *ngIf="isSelect" class="infield test-icon icon-down-open-big" [ngStyle]="{'color': !isValid ? '#af1685': ''}"></i>
+            <i *ngIf="isComboCheck" class="infield test-icon icon-filter"></i>
         </button>
     </div>
     <p *ngIf="!isValid" color="danger"><i class="test-icon icon-warning-round"></i> {{errorMessage}}</p>
